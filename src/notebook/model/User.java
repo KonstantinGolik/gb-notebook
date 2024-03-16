@@ -32,7 +32,6 @@ public class User {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
     public String getLastName() {
         return lastName;
     }
@@ -51,6 +50,6 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("Идентафикатор: %s\nИмя: %s,\nФамилия: %s,\nТелефон: %s", id, firstName, lastName, phone);
+        return String.format("Идентификатор %s:\nИмя: %s, Фамилия: %s, Телефон: %s\n", id, firstName, lastName, phone);
     }
 }

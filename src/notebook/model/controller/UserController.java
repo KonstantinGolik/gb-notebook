@@ -1,5 +1,6 @@
-package notebook.controller;
+package notebook.model.controller;
 
+import com.sun.org.apache.bcel.internal.generic.LUSHR;
 import notebook.model.User;
 import notebook.model.repository.GBRepository;
 
@@ -26,6 +27,12 @@ public class UserController {
         }
 
         throw new RuntimeException("User not found");
+    }
+    public List<User>  readAll(){
+        return repository.findAll();
+    }
+    public boolean deleteUser(Long userId){
+        return repository.delete(userId);
     }
 
     public void updateUser(String userId, User update) {
